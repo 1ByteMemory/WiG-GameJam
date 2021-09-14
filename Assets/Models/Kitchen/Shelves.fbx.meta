@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3df9decc8660ce745bf5629cdcef6a40
+guid: c128c2e4294807f4a936a1d9f52f9a8c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Workspace.001
-    second: {fileID: 2100000, guid: 188837614296a5c49bebac2196a9eb1b, type: 2}
+      name: M_Kitchen
+    second: {fileID: 2100000, guid: 6fd86231b90b99c43ad0170843c16c56, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Workspace
+  m_Name: M_Kitchen
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a752ee0e7c45a124ca7c6383cd725f47, type: 3}
+        m_Texture: {fileID: 2800000, guid: 577782259c96de345aa3a46f6cc0600e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,15 +40,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3fb018f84e2952d47bc097cbbe0c7180, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50637d2bf599e2447bf188ac85a37d3a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: b8fcb2493af683d4187788b28b1217c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: b99c4f9c11042d449b1fa9a9fee7278d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: b8fcb2493af683d4187788b28b1217c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: b99c4f9c11042d449b1fa9a9fee7278d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
