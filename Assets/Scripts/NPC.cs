@@ -11,6 +11,11 @@ public enum State
 }
 public class NPC : MonoBehaviour
 {
+    [Header("Debug Options")]
+    public bool overrideDefault;
+    public Item oDesiredItem;
+
+    [Header("Regular Options")]
     public Item desiredItem;
     public State state;
     public float minCooldownTime = 5;
@@ -88,8 +93,17 @@ public class NPC : MonoBehaviour
                 break;
 
 			case State.Tired:
+                if (overrideDefault)
+				{
+                    this.emotion.SetActive(true);
+                    desiredItem = oDesiredItem;
+                    this.emotion.GetComponent<SpriteRenderer>().sprite = emotions[(int)desiredItem];
+                    particles.Stop();
+                    break;
+				}
+                
                 this.emotion.SetActive(true);
-                desiredItem = (Item)Random.Range(0, EnumLength.Length());
+                desiredItem = (Item)Random.Range(0, ItemEnum.Length());
                 this.emotion.GetComponent<SpriteRenderer>().sprite = emotions[(int)desiredItem];
                 particles.Stop();
 				break;
@@ -128,8 +142,11 @@ public class NPC : MonoBehaviour
 
     public void GiveItem(GameObject item)
 	{
-        item.transform.parent = transform;
-        item.transform.localPosition = transform.right;
+        if (item.GetComponent<ItemObject>().isPickUp)
+        {
+            item.transform.parent = transform;
+            item.transform.localPosition = transform.right;
+        }
 
         heldItem = item;
 
