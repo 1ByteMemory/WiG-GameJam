@@ -30,7 +30,7 @@ public class ItemEnum
 	}
 
 
-    public static bool CheckWantStaticItem(Item desiredItem)
+    public static bool IsItemStatic(Item desiredItem)
 	{
         Item[] items = StaticItems();
 
