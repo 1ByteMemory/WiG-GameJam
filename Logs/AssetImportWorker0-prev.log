@@ -15,11 +15,11 @@ D:/Projects/Gamejam/WomenInGames/WiG-GameJam
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51184
+60631
 Successfully changed project path to: D:/Projects/Gamejam/WomenInGames/WiG-GameJam
 D:/Projects/Gamejam/WomenInGames/WiG-GameJam
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 26.73 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 27.25 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path F:/ArtPrograms/Unity/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,81 +35,81 @@ Initialize mono
 Mono path[0] = 'F:/ArtPrograms/Unity/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'F:/ArtPrograms/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/ArtPrograms/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/ArtPrograms/Unity/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001857 seconds.
+Registered in 0.002023 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 26.37 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 26.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.812 seconds
+- Completed reload, in  0.790 seconds
 Domain Reload Profiling:
-	ReloadAssembly (812ms)
-		BeginReloadAssembly (47ms)
+	ReloadAssembly (790ms)
+		BeginReloadAssembly (46ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (354ms)
-			LoadAssemblies (46ms)
+		EndReloadAssembly (349ms)
+			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (137ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (133ms)
+			SetupLoadedEditorAssemblies (132ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (26ms)
+				RefreshPlugins (27ms)
 				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (71ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
+				ProcessInitializeOnLoadAttributes (68ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002795 seconds.
+Registered in 0.002812 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.848 seconds
+- Completed reload, in  0.866 seconds
 Domain Reload Profiling:
-	ReloadAssembly (849ms)
-		BeginReloadAssembly (129ms)
+	ReloadAssembly (866ms)
+		BeginReloadAssembly (125ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (662ms)
-			LoadAssemblies (75ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (687ms)
+			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (234ms)
+			SetupTypeCache (256ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (238ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (241ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (47ms)
-				ProcessInitializeOnLoadAttributes (177ms)
+				BeforeProcessingInitializeOnLoad (48ms)
+				ProcessInitializeOnLoadAttributes (176ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
 Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1437 Unused Serialized files (Serialized files now loaded: 0)
@@ -117,7 +117,7 @@ System memory in use before: 66.4 MB.
 System memory in use after: 66.4 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1874.
-Total: 2.614400 ms (FindLiveObjects: 0.137200 ms CreateObjectMapping: 0.042100 ms MarkObjects: 2.370000 ms  DeleteObjects: 0.064100 ms)
+Total: 2.254500 ms (FindLiveObjects: 0.138900 ms CreateObjectMapping: 0.040400 ms MarkObjects: 2.020300 ms  DeleteObjects: 0.054000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,64 +132,89 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Models/RelaxAndOther/M_RelaxAndOther_Transparent.mat
-  artifactKey: Guid(2b45ecec6a7f829449b56b4df4c6bf6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/RelaxAndOther/M_RelaxAndOther_Transparent.mat using Guid(2b45ecec6a7f829449b56b4df4c6bf6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f0440473302b77092beca2a90c6e343') in 0.656013 seconds 
-  Import took 0.658004 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Models/RelaxAndOther/M_RelaxAndOther.mat
-  artifactKey: Guid(d5b03525a587252499a4d083af739a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/RelaxAndOther/M_RelaxAndOther.mat using Guid(d5b03525a587252499a4d083af739a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a423c6cf67f9c733b086197bf6f29edc') in 0.027805 seconds 
-  Import took 0.030052 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.720887 seconds.
-  path: Assets/Models/Workspace/M_WallFloor.mat
-  artifactKey: Guid(3f3b2ad50ed0ac841b331361c1cb210d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Workspace/M_WallFloor.mat using Guid(3f3b2ad50ed0ac841b331361c1cb210d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c211d646055215c9b504edc321933c') in 0.220820 seconds 
-  Import took 0.223308 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001352 seconds.
-  path: Assets/Models/Workspace/M_WallFloor.mat
-  artifactKey: Guid(3f3b2ad50ed0ac841b331361c1cb210d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Workspace/M_WallFloor.mat using Guid(3f3b2ad50ed0ac841b331361c1cb210d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c211d646055215c9b504edc321933c') in 0.018739 seconds 
-  Import took 0.021487 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.749775 seconds.
-  path: Assets/Models/Workspace/Office_Wall.fbx
-  artifactKey: Guid(46f66c253a56e824fa32dde0f97d05a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Workspace/Office_Wall.fbx using Guid(46f66c253a56e824fa32dde0f97d05a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef08180704aa83e12b0d39e9511f1f1') in 0.103949 seconds 
-  Import took 0.106806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
   path: Assets/Models/Workspace/Office_WallS.fbx
   artifactKey: Guid(c873bcf5d4334df489d314c845ba235d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Workspace/Office_WallS.fbx using Guid(c873bcf5d4334df489d314c845ba235d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dac358ffceba02b76ca39ad3bfa961ca') in 0.022138 seconds 
-  Import took 0.024394 seconds .
+Start importing Assets/Models/Workspace/Office_WallS.fbx using Guid(c873bcf5d4334df489d314c845ba235d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a67b5a56a40247762194cbe2b995c063') in 0.849545 seconds 
+  Import took 0.880870 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.307448 seconds.
-  path: Assets/Models/Workspace/T_Workspace_Maskmap.png
-  artifactKey: Guid(b8fcb2493af683d4187788b28b1217c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Workspace/T_Workspace_Maskmap.png using Guid(b8fcb2493af683d4187788b28b1217c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23749f102438db7958879b22d5ddb6f6') in 0.021056 seconds 
-  Import took 0.027738 seconds .
+  Time since last request: 0.000229 seconds.
+  path: Assets/Models/Workspace/Office_Wall.fbx
+  artifactKey: Guid(46f66c253a56e824fa32dde0f97d05a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Workspace/Office_Wall.fbx using Guid(46f66c253a56e824fa32dde0f97d05a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d956e544aa896f057f600992cec4e5') in 0.035529 seconds 
+  Import took 0.050834 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.617584 seconds.
-  path: Assets/Models/Workspace/T_Workspace_Maskmap.png
-  artifactKey: Guid(b8fcb2493af683d4187788b28b1217c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Workspace/T_Workspace_Maskmap.png using Guid(b8fcb2493af683d4187788b28b1217c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ceddcfe5f5ffcc29a8a66cb233a1134') in 0.010158 seconds 
-  Import took 0.012472 seconds .
+  Time since last request: 1362.898396 seconds.
+  path: Assets/Models/RelaxAndOther/T_WallFloor_N.png
+  artifactKey: Guid(f2ece265653164e468fdb3550947c860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/T_WallFloor_N.png using Guid(f2ece265653164e468fdb3550947c860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44953480fe879edededbe6197cd161db') in 0.071576 seconds 
+  Import took 0.092506 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 59.303371 seconds.
+  path: Assets/Models/RelaxAndOther/T_WallFloor_MaskMap.png
+  artifactKey: Guid(0ce7b84d54a98854dae08c52846dc92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/T_WallFloor_MaskMap.png using Guid(0ce7b84d54a98854dae08c52846dc92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9e42d2a8f7042c2a3e06328b56b0b3') in 0.011949 seconds 
+  Import took 0.027155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.570814 seconds.
+  path: Assets/Models/RelaxAndOther/T_WallFloor_MaskMap.png
+  artifactKey: Guid(0ce7b84d54a98854dae08c52846dc92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/T_WallFloor_MaskMap.png using Guid(0ce7b84d54a98854dae08c52846dc92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d842017d730686900deea9c16b090f') in 0.026683 seconds 
+  Import took 0.075718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.081809 seconds.
+  path: Assets/Models/RelaxAndOther/T_RelaxationAndStuff_BC.png
+  artifactKey: Guid(3f2027874bdb6e34480ea870e9d5452d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/T_RelaxationAndStuff_BC.png using Guid(3f2027874bdb6e34480ea870e9d5452d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec8e0b5c4a7f573de09def329f7b6b6c') in 0.041814 seconds 
+  Import took 0.060100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.838511 seconds.
+  path: Assets/Models/RelaxAndOther/Cube_Face_Normal.fbx
+  artifactKey: Guid(33639100fe30fa04fb28af261141b3ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/Cube_Face_Normal.fbx using Guid(33639100fe30fa04fb28af261141b3ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abbf6703b7dc2e846e2bc465e8a4278') in 0.026409 seconds 
+  Import took 0.052526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.290244 seconds.
+  path: Assets/Models/RelaxAndOther/Cube_Face_Relaxed.fbx
+  artifactKey: Guid(853f5649b18226542acb3894844a6971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/Cube_Face_Relaxed.fbx using Guid(853f5649b18226542acb3894844a6971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e62cb0e57d351a5a3b60486005d3413') in 0.023080 seconds 
+  Import took 0.041191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.331719 seconds.
+  path: Assets/Models/RelaxAndOther/Cube_Face_Tired.fbx
+  artifactKey: Guid(1fc5909b3dd5e1640a1192dce876f669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/Cube_Face_Tired.fbx using Guid(1fc5909b3dd5e1640a1192dce876f669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d281de0b56e6b8659cf3a433f78d3f2') in 0.021734 seconds 
+  Import took 0.034493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.703480 seconds.
+  path: Assets/Models/RelaxAndOther/T_RelaxationAndStuff_MaskMap.png
+  artifactKey: Guid(bbee378d172f60d4999f102e5d1d3755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/T_RelaxationAndStuff_MaskMap.png using Guid(bbee378d172f60d4999f102e5d1d3755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6418234223ed511d87c9a865cfc25193') in 0.015769 seconds 
+  Import took 0.038026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002829 seconds.
+  path: Assets/Models/RelaxAndOther/T_RelaxationAndStuff_MaskMap.png
+  artifactKey: Guid(bbee378d172f60d4999f102e5d1d3755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/RelaxAndOther/T_RelaxationAndStuff_MaskMap.png using Guid(bbee378d172f60d4999f102e5d1d3755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6418234223ed511d87c9a865cfc25193') in 0.014303 seconds 
+  Import took 0.016499 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
