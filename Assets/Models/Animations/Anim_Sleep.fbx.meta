@@ -8,7 +8,7 @@ ModelImporter:
     second: Armature_Sleep|Armature_BlanketAction
   - first:
       74: -3459018420705446206
-    second: Armature_Sleep|Armature_Typing.001Action
+    second: Sleep
   - first:
       74: 4598104611205985922
     second: Armature_Sleep|Armature_Typing.001Action.001
@@ -83,7 +83,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature_Sleep|Armature_Typing.001Action
+      name: Sleep
       takeName: Armature_Sleep|Armature_Typing.001Action
       internalID: 0
       firstFrame: 0
@@ -94,7 +94,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -114,7 +114,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.75
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -165,7 +165,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 1.75
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
