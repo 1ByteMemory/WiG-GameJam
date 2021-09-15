@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_RelaxationAndStuff.001
-    second: {fileID: 2100000, guid: d5b03525a587252499a4d083af739a4f, type: 2}
+    second: {fileID: 2100000, guid: 2b45ecec6a7f829449b56b4df4c6bf6a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
