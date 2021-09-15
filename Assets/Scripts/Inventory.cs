@@ -26,6 +26,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        GameManager gm = FindObjectOfType<GameManager>();
 		for (int i = 0; i < ItemEnum.Length(); i++)
 		{
             ItemsCollected.Add((Item)i, new List<GameObject>());
@@ -35,10 +36,12 @@ public class Inventory : MonoBehaviour
             rect.anchorMax = new Vector2(1, 1);
             rect.anchorMin = new Vector2(0, 1);
             rect.sizeDelta = new Vector2(0, 60);
-            rect.anchoredPosition = new Vector2(0, -ItemsCollected.Count * 30);
+            rect.anchoredPosition = new Vector2(0, -ItemsCollected.Count * 69);
 
-            text.GetComponent<Text>().text = string.Format("{0}: {1}", (Item)i, 0);
+            text.GetComponent<Text>().text = string.Format("{0}", 0);
             text.GetComponent<Text>().horizontalOverflow = HorizontalWrapMode.Overflow;
+
+            text.GetComponentInChildren<Image>().sprite = gm.ImgArray[i];
 
             // Add the text element for easy access later
             ItemsCollected[(Item)i].Add(text);
