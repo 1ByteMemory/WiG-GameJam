@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
 
                     Debug.Log(npc);
                     Debug.Log(itemObject);
-
+                    
                     // If Item can can be picked up and not holding npc, Pick up Item
                     if (!isHoldingNPC && itemObject != null && itemObject.isPickUp)
                     {
@@ -82,7 +82,7 @@ public class Inventory : MonoBehaviour
                     
                     
                     // NPC and wants to be taken somewhere
-                    else if (!isHoldingNPC && npc != null && ItemEnum.CheckWantStaticItem(npc.desiredItem))
+                    else if (!isHoldingNPC && npc != null && npc.state == State.Tired && ItemEnum.IsItemStatic(npc.desiredItem))
 					{
                         // Pick up NPC
                         npc.GetComponent<Collider>().enabled = false;
@@ -91,10 +91,14 @@ public class Inventory : MonoBehaviour
                         npc.transform.localEulerAngles = Vector3.zero;
                         npc.GetComponent<Rigidbody>().useGravity = false;
 
+                        // Disable nav mesh on npc
+                        npc.NavMeshEnable(false);
+
                         // PLayer shouldn't be able to do anything else while holding an npc
                         isHoldingNPC = true;
 					}
 
+                    
 
                     // Else If NPC is held and looking at NPC's desierd Item
                     else if (isHoldingNPC 
