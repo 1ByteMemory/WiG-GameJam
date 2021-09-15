@@ -66,7 +66,15 @@ public class Inventory : MonoBehaviour
 
                     Debug.Log(npc);
                     Debug.Log(itemObject);
-                    
+
+                    if (itemObject != null && holdNPCTransform.childCount > 0)
+                    {
+                        Debug.Log(isHoldingNPC);
+                        Debug.Log(holdNPCTransform.GetChild(0).GetComponent<NPC>().desiredItem == itemObject.item);
+                        Debug.Log(itemObject.npcRelaxingSpot != null);
+                        Debug.Log(!itemObject.isOccupied);
+                    }
+
                     // If Item can can be picked up and not holding npc, Pick up Item
                     if (!isHoldingNPC && itemObject != null && itemObject.isPickUp)
                     {
@@ -79,8 +87,23 @@ public class Inventory : MonoBehaviour
                         ItemsCollected[pickUp][0].GetComponent<Text>().text = string.Format("{0}: {1}", pickUp, ItemsCollected[pickUp].Count - 1);
 
                     }
-                    
-                    
+
+                    // Else If NPC and NPC has Item
+                    else if (!isHoldingNPC && npc != null && npc.HeldItem != null)
+                    {
+                        // If NPC has item, take it
+
+                        // Add Item to dictionary
+                        Item pickUp = npc.HeldItem.GetComponent<ItemObject>().item;
+
+                        ItemsCollected[pickUp].Add(npc.HeldItem);
+                        ItemsCollected[pickUp][0].GetComponent<Text>().text = string.Format("{0}: {1}", pickUp, ItemsCollected[pickUp].Count - 1);
+
+                        // Remove it from the npc
+                        npc.StealItem();
+                    }
+
+
                     // NPC and wants to be taken somewhere
                     else if (!isHoldingNPC && npc != null && npc.state == State.Tired && ItemEnum.IsItemStatic(npc.desiredItem))
 					{
@@ -120,22 +143,6 @@ public class Inventory : MonoBehaviour
                         _npc.GiveItem(itemObject.gameObject);
 
 					}
-
-
-                    // Else If NPC and NPC has Item
-                    else if (!isHoldingNPC && npc != null && npc.HeldItem != null)
-                    {
-                        // If NPC has item, take it
-
-                        // Add Item to dictionary
-                        Item pickUp = npc.HeldItem.GetComponent<ItemObject>().item;
-
-                        ItemsCollected[pickUp].Add(npc.HeldItem);
-                        ItemsCollected[pickUp][0].GetComponent<Text>().text = string.Format("{0}: {1}", pickUp, ItemsCollected[pickUp].Count - 1);
-
-                        // Remove it from the npc
-                        npc.StealItem();
-                    }
 
                     // If NPC and NPC does not have Item
                     else if (!isHoldingNPC && npc != null && npc.HeldItem == null)

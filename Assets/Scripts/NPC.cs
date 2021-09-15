@@ -128,8 +128,8 @@ public class NPC : MonoBehaviour
                 }
                 if (heldItem != null && ItemEnum.IsItemStatic(desiredItem))
 				{
+                    Debug.Log("nulling");
                     heldItem.GetComponent<ItemObject>().isOccupied = false;
-                    heldItem.GetComponent<ItemObject>().npcRelaxingSpot = null;
                     heldItem = null;
 				}
                 GetComponent<CapsuleCollider>().enabled = true;
