@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56b3dfe66bedefd40827c029c03f98d9
+guid: 8d72d82d120577344965bee355d7029a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_WallFloor.001
-    second: {fileID: 2100000, guid: 3f3b2ad50ed0ac841b331361c1cb210d, type: 2}
+      name: M_RelaxationAndStuff.001
+    second: {fileID: 2100000, guid: d5b03525a587252499a4d083af739a4f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
