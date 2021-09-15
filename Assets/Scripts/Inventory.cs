@@ -11,9 +11,6 @@ public class Inventory : MonoBehaviour
     public GameObject ui;
     public GameObject uiText;
 
-    public Transform holdNPCTransform;
-    private bool isHoldingNPC;
-
     public Dictionary<Item, List<GameObject>> ItemsCollected = new Dictionary<Item, List<GameObject>>();
     //public Dictionary<Item, int> ItemsCollected = new Dictionary<Item, int>();
 
@@ -26,7 +23,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-		for (int i = 0; i < ItemEnum.Length(); i++)
+		for (int i = 0; i < EnumLength.Length(); i++)
 		{
             ItemsCollected.Add((Item)i, new List<GameObject>());
 
@@ -62,23 +59,11 @@ public class Inventory : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     NPC npc = hit.transform.GetComponent<NPC>();
-                    ItemObject itemObject = hit.transform.GetComponent<ItemObject>();
 
-                    Debug.Log(npc);
-                    Debug.Log(itemObject);
-
-                    if (itemObject != null && holdNPCTransform.childCount > 0)
+                    // If Item, Pick up Item
+                    if (hit.transform.GetComponent<ItemObject>() != null)
                     {
-                        Debug.Log(isHoldingNPC);
-                        Debug.Log(holdNPCTransform.GetChild(0).GetComponent<NPC>().desiredItem == itemObject.item);
-                        Debug.Log(itemObject.npcRelaxingSpot != null);
-                        Debug.Log(!itemObject.isOccupied);
-                    }
-
-                    // If Item can can be picked up and not holding npc, Pick up Item
-                    if (!isHoldingNPC && itemObject != null && itemObject.isPickUp)
-                    {
-                        Item pickUp = itemObject.item;
+                        Item pickUp = hit.transform.GetComponent<ItemObject>().item;
 
                         hit.transform.gameObject.SetActive(false);
 
@@ -87,9 +72,7 @@ public class Inventory : MonoBehaviour
                         ItemsCollected[pickUp][0].GetComponent<Text>().text = string.Format("{0}: {1}", pickUp, ItemsCollected[pickUp].Count - 1);
 
                     }
-
-                    // Else If NPC and NPC has Item
-                    else if (!isHoldingNPC && npc != null && npc.HeldItem != null)
+                    else if (npc != null && npc.HeldItem != null)
                     {
                         // If NPC has item, take it
 
@@ -102,50 +85,7 @@ public class Inventory : MonoBehaviour
                         // Remove it from the npc
                         npc.StealItem();
                     }
-
-
-                    // NPC and wants to be taken somewhere
-                    else if (!isHoldingNPC && npc != null && npc.state == State.Tired && ItemEnum.IsItemStatic(npc.desiredItem))
-					{
-                        // Pick up NPC
-                        npc.GetComponent<Collider>().enabled = false;
-                        npc.transform.SetParent(holdNPCTransform, false);
-                        npc.transform.localPosition = Vector3.zero;
-                        npc.transform.localEulerAngles = Vector3.zero;
-                        npc.GetComponent<Rigidbody>().useGravity = false;
-
-                        // Disable nav mesh on npc
-                        npc.NavMeshEnable(false);
-
-                        // PLayer shouldn't be able to do anything else while holding an npc
-                        isHoldingNPC = true;
-					}
-
-                    
-
-                    // Else If NPC is held and looking at NPC's desierd Item
-                    else if (isHoldingNPC 
-                            && holdNPCTransform.GetChild(0).GetComponent<NPC>().desiredItem == itemObject.item 
-                            && itemObject.npcRelaxingSpot != null 
-                            && !itemObject.isOccupied)
-					{
-                        // Set NPC's position to the relaxing item
-                        NPC _npc = holdNPCTransform.GetChild(0).GetComponent<NPC>();
-                        _npc.transform.parent = null;
-                        _npc.transform.position = itemObject.npcRelaxingSpot.position;
-                        _npc.transform.eulerAngles = itemObject.npcRelaxingSpot.localEulerAngles;
-
-                        itemObject.isOccupied = true;
-
-                        isHoldingNPC = false;
-
-                        // Tell the NPC they are relaxing now
-                        _npc.GiveItem(itemObject.gameObject);
-
-					}
-
-                    // If NPC and NPC does not have Item
-                    else if (!isHoldingNPC && npc != null && npc.HeldItem == null)
+                    else if (npc != null && npc.HeldItem == null)
                     {
                         // If NPC, Give Item
 
