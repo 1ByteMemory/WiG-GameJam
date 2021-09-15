@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+
 
 public enum State
 {
@@ -11,11 +11,6 @@ public enum State
 }
 public class NPC : MonoBehaviour
 {
-    [Header("Debug Options")]
-    public bool overrideDefault;
-    public Item oDesiredItem;
-
-    [Header("Regular Options")]
     public Item desiredItem;
     public State state;
     public float minCooldownTime = 5;
@@ -25,8 +20,6 @@ public class NPC : MonoBehaviour
     Sprite[] emotions;
 
     GameManager gm;
-    NavMeshAgent ai;
-    Vector3 startPos;
 
     public ParticleSystem particles;
     public GameObject emotion;
@@ -37,15 +30,6 @@ public class NPC : MonoBehaviour
         get { return heldItem; }
 	}
 
-    bool isClose(Vector3 a, Vector3 b, float distance)
-	{
-        return ((a.x - b.x) * (a.x - b.x)) 
-             + ((a.y - b.y) * (a.y - b.y))
-             + ((a.z - b.z) * (a.z - b.z))
-             <= distance * distance;
-        
-	}
-
 
     // Start is called before the first frame update
     void Start()
@@ -54,12 +38,6 @@ public class NPC : MonoBehaviour
         emotion.SetActive(false);
         gm = FindObjectOfType<GameManager>();
         emotions = gm.ImgArray;
-
-        Color col = Random.ColorHSV(0, 1, 1, 1, 0.5f, 1, 1, 1);
-        GetComponent<MeshRenderer>().material.color = col;
-        ai = GetComponent<NavMeshAgent>();
-        ai.enabled = false;
-        startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -70,13 +48,9 @@ public class NPC : MonoBehaviour
             if (Time.time >= endTime && state == State.Normal)
             {
                 SetEmotion(State.Tired);
-                //state = State.Tired;
+                state = State.Tired;
             }
 
-            if (isClose(transform.position, startPos, 1) && (state == State.Normal || state == State.Tired))
-			{
-                ai.enabled = false;
-			}
 
             switch (state)
             {
@@ -103,16 +77,6 @@ public class NPC : MonoBehaviour
         }
 	}
 
-    public void NavMeshEnable(bool enabled)
-	{
-        ai.enabled = enabled;
-	}
-
-    public State GetEmotion()
-	{
-        return state;
-	}
-
     public void SetEmotion(State emotion)
 	{
         state = emotion;
@@ -121,51 +85,19 @@ public class NPC : MonoBehaviour
 			case State.Normal:
                 endTime = Time.time + Random.Range(minCooldownTime, maxCooldownTime);
                 particles.Stop();
-                if (!isClose(transform.position, startPos, 1))
-                {
-                    ai.enabled = true;
-                    ai.SetDestination(startPos);
-                }
-                if (heldItem != null && ItemEnum.IsItemStatic(desiredItem))
-				{
-                    Debug.Log("nulling");
-                    heldItem.GetComponent<ItemObject>().isOccupied = false;
-                    heldItem = null;
-				}
-                GetComponent<CapsuleCollider>().enabled = true;
                 break;
 
 			case State.Tired:
-                if (overrideDefault)
-				{
-                    this.emotion.SetActive(true);
-                    desiredItem = oDesiredItem;
-                    this.emotion.GetComponent<SpriteRenderer>().sprite = emotions[(int)desiredItem];
-                    particles.Stop();
-                    if (!isClose(transform.position, startPos, 1))
-                    {
-                        ai.enabled = true;
-                        ai.SetDestination(startPos);
-                    }
-                    break;
-				}
-                
                 this.emotion.SetActive(true);
-                desiredItem = (Item)Random.Range(0, ItemEnum.Length());
+                desiredItem = (Item)Random.Range(0, EnumLength.Length());
                 this.emotion.GetComponent<SpriteRenderer>().sprite = emotions[(int)desiredItem];
                 particles.Stop();
-                if (!isClose(transform.position, startPos, 1))
-                {
-                    ai.enabled = true;
-                    ai.SetDestination(startPos);
-                }
-                break;
+				break;
 
 			case State.Relaxing:
                 relaxingEndtime = Time.time + Random.Range(minCooldownTime, maxCooldownTime);
                 this.emotion.SetActive(false);
                 particles.Play();
-                ai.enabled = false;
                 break;
 		}
 	}
@@ -196,11 +128,8 @@ public class NPC : MonoBehaviour
 
     public void GiveItem(GameObject item)
 	{
-        if (item.GetComponent<ItemObject>().isPickUp)
-        {
-            item.transform.parent = transform;
-            item.transform.localPosition = transform.right;
-        }
+        item.transform.parent = transform;
+        item.transform.localPosition = transform.right;
 
         heldItem = item;
 

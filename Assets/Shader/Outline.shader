@@ -8,6 +8,10 @@
         _Color("Color", Color) = (1,1,1,1)
         _MainTex("Albedo", 2D) = "white" {}
     }
+    CGINCLUDE
+        #define UNITY_SETUP_BRDF_INPUT MetallicSetup
+    ENDCG
+
     SubShader
     {
         // Outline Pass
